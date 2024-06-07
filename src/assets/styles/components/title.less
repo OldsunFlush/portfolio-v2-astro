@@ -1,0 +1,122 @@
+/* ==================================================
+ * Title styles
+ ================================================= */
+
+.title,
+.subtitle {
+    text-align: center;
+}
+
+.title-container {
+    width: 100%;
+    text-align: center;
+}
+.title-section {
+    display: inline-block;
+    font-family: @fontTitle;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 4rem;
+    padding: 1.4rem 0 1.2rem;
+    box-sizing: border-box;
+}
+
+.subtitle {
+    font-family: @fontContent;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    padding: 4.6rem 0 9.6rem;
+}
+
+/* Sections
+ ================================================= */
+
+.title-home {
+    z-index: 10;
+    text-align: center;
+    transform: translate3d(0, -100%, 0);
+
+    @media (max-width: @tablet) {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.title-about {
+    color: #fff;
+    border-top: .3rem solid @color-primary;
+    border-bottom: .3rem solid @color-primary;
+}
+.subtitle-about {
+    color: @color-secondary;
+}
+
+.title-works {
+    color: @color-primary;
+    border-top: .3rem solid @color-tertiary;
+    border-bottom: .3rem solid @color-tertiary;
+}
+.subtitle-works {
+    color: @color-tertiary;
+}
+
+.title-skills {
+    color: #fff;
+    border-top: .3rem solid @color-primary;
+    border-bottom: .3rem solid @color-primary;
+}
+.subtitle-skills {
+    color: @color-primary;
+}
+
+.title-contact {
+    color: @color-primary;
+    border-top: .3rem solid #fff;
+    border-bottom: .3rem solid #fff;
+}
+.subtitle-contact {
+    color: #fff;
+}
+
+@media (max-width: @tabletMin) {
+    .title-home {
+        h1 {
+            width: 29rem;
+            font-size: 7.7rem;
+        }
+    }
+}
+@media (max-width: @smartphone) {
+    .title-home {
+        h1 {
+            width: 29rem;
+            font-size: 4.8rem;
+        }
+    }
+    
+    .title-section {
+        font-size: 3.2rem;
+        line-height: 2.5rem;
+
+        &.title-map {
+            padding: .3rem 0 1.4rem;
+            line-height: 2.9rem;
+        }
+    }
+    
+    .subtitle {
+        padding: 4.2rem 0;
+        line-height: 1.8rem;
+    }
+}
+@media (max-width: @smartphoneLowRes) {
+    .title-home {
+        h1 {
+            width: 24rem;
+            font-size: 4.2rem;
+        }
+    }
+    .title-section {
+        line-height: 2.9rem;
+    }
+}

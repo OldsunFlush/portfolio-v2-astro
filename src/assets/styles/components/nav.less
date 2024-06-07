@@ -1,0 +1,389 @@
+/* ==================================================
+ * Nav styles
+ ================================================= */
+
+.nav {
+	position: relative;
+}
+
+.nav-main {
+    float: right;
+    margin-right: 4.4rem;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            display: inline-block;
+            height: 10rem;
+            line-height: 10rem;
+            text-align: center;
+            
+            a {
+                padding: 3.6rem 1.8rem;
+                font-family: @fontContent;
+                font-weight: 400;
+                font-size: 1.6rem;
+                color: #fff;
+                text-transform: uppercase;
+                .transition(font-size .2s);
+                
+                &:hover {
+                    border-top: .3rem solid #fff;
+                }
+            }
+        }
+    }
+    
+    a.settings-toggle {
+        display: none;
+    }
+
+    header.reduced & {
+        ul li {
+            height: 5rem;
+            line-height: 5rem;
+            
+            a {
+                padding: 1.4rem 1.8rem;
+                font-size: 1.5rem;
+                .transition(font-size .2s);
+                
+                &:hover {
+                    border-top: .2rem solid #fff;
+                }
+            }
+        }
+    }
+}
+
+.sidemenu-toggle {
+    position: absolute;
+    top: .2rem;
+    right: 5.5rem;
+    width: 2.3rem;
+    height: 1.8rem;
+    margin: 0 auto;
+    padding: 4.8rem 2.8rem;
+    display: block;
+    background: url('../images/icon-settings.svg') no-repeat center center;
+    background-size: 2.2rem 2.2rem;
+    border-top: 0;
+    z-index: 105;
+    transform: rotate(0);
+    .transition(all .2s);
+    
+    span {
+        position: absolute;
+        top: 0;
+        right: 1.8rem;
+        width: 2.3rem;
+        height: .4rem;
+        display: none;
+        background-color: #fff;
+        opacity: 1;
+        .rotate(0);
+        .transition(all .2s);
+        
+        &:nth-child(1) {
+            top: 3.7rem;
+        }
+        &:nth-child(2) {
+            opacity: 1;
+            top: 4.5rem;
+        }
+        &:nth-child(3) {
+            top: 5.3rem;
+        }
+    }
+    
+    &:hover {
+        .rotate(25deg);
+        
+        span {
+            &:nth-child(1) {
+                top: 4.5rem;
+                .rotate(135deg);
+            }
+            &:nth-child(2) {
+                right: -6rem;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                top: 4.5rem;
+                .rotate(-135deg);
+            }
+        }
+    }
+
+    header.reduced & {
+        padding: 2.3rem 2.6rem;
+        border-top: 0;
+        .transition(all .25s ease-in-out);
+
+        span {
+            width: 1.8rem;
+            height: .3rem;
+
+            &:nth-child(1) {
+                top: 1.6rem;
+            }
+            &:nth-child(2) {
+                top: 2.2rem;
+                opacity: 1;
+            }
+            &:nth-child(3) {
+                top: 2.8rem;
+            }
+        }
+
+        &:hover span {
+            &:nth-child(1) {
+                top: 2.2rem;
+                .rotate(135deg);
+            }
+            &:nth-child(2) {
+                right: -6rem;
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                top: 2.2rem;
+                .rotate(-135deg);
+            }
+        }
+    }
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: @color-tertiary;
+    z-index: 105;
+
+    .language-selector {
+        padding: 1rem 0 2.2rem;
+        display: inline-block;
+        color: #fff;
+
+        a {
+            font-size: 1.6rem;
+            color: #fff;
+
+            &:hover {
+                color: @color-primary;
+            }
+        }
+    }
+}
+
+.settings-toggle {
+    display: none;
+}
+
+.settings-menu {
+    .sidemenu();
+    right: 0;
+    padding: 2.4rem 3.2rem;
+    box-sizing: border-box;
+    transform: translate3d(-100%, 0, 0);
+    .transition(all .5s);
+    
+    &.open {
+        transform: translate3d(0, 0, 0);
+    }
+    
+    h2 {
+        font-size: 3.2rem;
+        color: @color-primary;
+        display: block;
+        
+        span {
+            font-size: 1.4rem;
+            color: #fff;
+            display: block;
+        }
+    }
+
+    .version-number {
+        position: absolute;
+        bottom: 2.4rem;
+        left: 3.2rem;
+        color: #fff;
+        opacity: .5;
+    }
+}
+
+@media (max-width: @tabletMax) {
+    .sidemenu-toggle:hover,
+    .settings-toggle:hover {
+        transform: none !important;
+    }
+}
+
+@media (min-width: @tabletMin) and (max-width: @tabletMax) {
+    .settings-menu {
+        width: 25%;
+    }
+}
+
+@media (max-width: @smartphone) {
+    .nav-main {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        margin-right: 0;
+        background-color: @color-tertiary;
+        transform: translate3d(100%, 0, 0);
+        .transition(all .5s);
+        
+        ul {
+            margin: 0;
+            padding: 5rem 0 0;
+            box-sizing: border-box;
+            
+            li {
+                width: 100%;
+                height: 5rem;
+                line-height: 5rem;
+                text-align: left;
+                
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 5rem;
+                    padding: 0 0 0 3.1rem;
+                    line-height: 5rem;
+                    border-left: .3rem solid @color-tertiary;
+                    box-sizing: border-box;
+                    
+                    &:hover {
+                        color: @color-tertiary;
+                        background-color: #fff;
+                        border: 0;
+                        border-left: .3rem solid @color-primary;
+                    }
+                }
+            }
+        }
+
+        &.open {
+            transform: translate3d(0, 0, 0);
+            .transition(all .5s);
+        }
+        
+         a.settings-toggle {
+            display: block;
+        }
+    }
+
+    .sidemenu-toggle {
+        right: 1.6rem;
+        padding: 2.3rem 2.7rem;
+        background-image: none;
+        
+        span {
+            display: block;
+            width: 1.8rem;
+            height: .3rem;
+
+            &:nth-child(1) {
+                top: 1.6rem;
+            }
+            &:nth-child(2) {
+                opacity: 1;
+                top: 2.2rem;
+            }
+            &:nth-child(3) {
+                top: 2.8rem;
+            }
+        }
+        
+        &:hover {
+            transform: none !important;
+            
+            span {
+                transform: none !important;
+                &:nth-child(1) {
+                    top: 1.6rem;
+                }
+                &:nth-child(2) {
+                    opacity: 1;
+                    top: 2.2rem;
+                    right: 1.8rem;
+                }
+                &:nth-child(3) {
+                    top: 2.8rem;
+                }
+            }
+        }
+    }
+    
+    .settings-toggle {
+        position: relative;
+        top: .1rem;
+        left: 1.8rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        padding: 2.5rem 2.7rem;
+        display: block;
+        background: url('../images/icon-settings.svg') no-repeat center center;
+        background-size: 2.2rem 2.2rem;
+        .rotate(0);
+        .transition(all .2s);
+        
+        &:hover {
+            .rotate(25deg);
+        }
+    }
+    
+    .settings-menu {
+        width: 50%;
+        
+        h2 span {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: @smartphone) and (orientation: landscape) {
+    .nav-main ul {
+        padding: .2rem 0 0;
+    }
+}
+
+@media (max-width: @smartphoneLowRes) {
+    .nav-main ul {
+        padding: .2rem 0 0;
+        
+        li a {
+            padding: 0 0 0 1.8rem;
+        }
+    }
+    
+    .sidemenu-toggle {
+        right: .2rem;
+    }
+    
+    .settings-toggle {
+        left: .4rem;
+    }
+    
+    .settings-menu {
+        padding: 1.5rem 2rem;
+        
+        h2 {
+            font-size: 2.4rem;
+        }
+
+        .version-number {
+            bottom: 1.5rem;
+            left: 2rem;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+/* ==================================================
+ * LESS mixins
+ ================================================= */
+
+.font-smoothing() {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
+// Hide a text from its container
+.ir() {
+    display: block;
+    font: ~"0/0" a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.transition(@arguments) {
+    transition: @arguments;
+}
+
+.rotate(@deg) {
+    -webkit-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    transform: rotate(@deg);
+}
+
+.scale(@ratio) {
+    -webkit-transform: scale(@ratio);
+    -ms-transform: scale(@ratio);
+    transform: scale(@ratio);
+}
+
+.background-size(@type: cover) {
+    background-size: @type;
+}
+
+.appearance(@type: none) {
+    -webkit-appearance: @type;
+    appearance: @type;
+}
+
+.filter(@type, @value: 100%) {
+    -webkit-filter: ~"@{type}(@{value})";
+    -ms-filter: ~"@{type}(@{value})";
+    filter: ~"@{type}(@{value})";
+}
