@@ -291,37 +291,37 @@
           .addClass("animate");
       });
     },
-    // leafletMap: function () {
-    //   var map = L.map("map").setView([44.837789, -0.57918], 13),
-    //     marker = L.icon({
-    //       iconUrl: "/images/icons/map-marker.svg",
-    //       iconSize: [41, 51],
-    //       iconAnchor: [22, 58],
-    //     });
+    leafletMap: function () {
+      var map = L.map("map").setView([44.837789, -0.57918], 13),
+        marker = L.icon({
+          iconUrl: "/images/icons/map-marker.svg",
+          iconSize: [41, 51],
+          iconAnchor: [22, 58],
+        });
 
-    //   L.tileLayer(
-    //     "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
-    //     {
-    //       id: "oldsunflush.4b3b09f8",
-    //       accessToken:
-    //         "pk.eyJ1Ijoib2xkc3VuZmx1c2giLCJhIjoiZTNjOWNhMjhlMmExYTdiNzMzOTNmODRhZjFiNmFmYjUifQ.ASWmDJD_WvO8tRkaWxW_Og",
-    //       attributionControl: false,
-    //       zoomControl: false,
-    //     }
-    //   ).addTo(map);
+      L.tileLayer(
+        "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+        {
+          id: "oldsunflush.4b3b09f8",
+          accessToken:
+            "pk.eyJ1Ijoib2xkc3VuZmx1c2giLCJhIjoiZTNjOWNhMjhlMmExYTdiNzMzOTNmODRhZjFiNmFmYjUifQ.ASWmDJD_WvO8tRkaWxW_Og",
+          attributionControl: false,
+          zoomControl: false,
+        }
+      ).addTo(map);
 
-    //   L.marker([44.837789, -0.57918], { icon: marker }).addTo(map);
+      L.marker([44.837789, -0.57918], { icon: marker }).addTo(map);
 
-    //   map.dragging.disable();
-    //   map.touchZoom.disable();
-    //   map.doubleClickZoom.disable();
-    //   map.scrollWheelZoom.disable();
-    //   map.boxZoom.disable();
-    //   map.keyboard.disable();
+      map.dragging.disable();
+      map.touchZoom.disable();
+      map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+      map.boxZoom.disable();
+      map.keyboard.disable();
 
-    //   if (map.tap) map.tap.disable();
-    //   document.getElementById("map").style.cursor = "default";
-    // },
+      if (map.tap) map.tap.disable();
+      document.getElementById("map").style.cursor = "default";
+    },
   };
 
   /**
