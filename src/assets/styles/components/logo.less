@@ -1,0 +1,53 @@
+/* ==================================================
+ * Logo styles
+ ================================================= */
+
+.logo {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo-main {
+    margin-top: 1.8rem;
+    .transition(all .2s ease-in-out);
+
+    &:hover {
+        opacity: .5;
+        .rotate(5deg);
+    }
+    
+    img {
+        .transition(all .2s);
+    }
+
+    header.reduced & {
+    	margin-top: .9rem;
+            
+        img {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+
+    footer & {
+    	margin: 3.8rem 0 3.2rem;
+        .transition(all .2s ease-in-out);
+        
+        &:hover {
+            .scale(.9);
+        }
+    }
+}
+
+@media (max-width: @smartphone) {
+	.logo-main {
+		margin-top: .9rem;
+	            
+	    header & {
+            img {
+    	        width: 3.2rem;
+    	        height: 3.2rem;
+    	    }
+        }
+	}
+}

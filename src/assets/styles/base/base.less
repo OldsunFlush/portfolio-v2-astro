@@ -1,0 +1,69 @@
+/* ==================================================
+ * Base styles
+ ================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-width: 320px;
+    font-family: @fontContent;
+    font-size: 1.5rem;
+    color: @color-text;
+    line-height: 1.5;
+    background: @color-bg;
+    overflow-x: hidden;
+    .font-smoothing();
+}
+
+a {
+    text-decoration: none;
+    .font-smoothing();
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+	font-family: @fontTitle;
+	font-weight: 700;
+	font-size: 7.6rem;
+}
+h2{
+	font-family: @fontTitle;
+	font-weight: 400;
+	font-size: 5rem;
+}
+h3 {
+    font-family: @fontContent;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+h4 {
+    font-family: @fontTitle;
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+
+ul,
+p {
+	margin: 0;
+    padding: 0;
+}
+p {
+    font-size: 1.5rem;
+    .font-smoothing();
+}
+
+ul li{
+	list-style: none;
+}

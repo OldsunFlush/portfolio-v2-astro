@@ -1,0 +1,109 @@
+.night-mode {
+    .header-overlay {
+        background-color: rgba(0, 0, 0, .75);
+    }
+
+    .settings-menu {
+        background-color: #1c1c1c;
+    }
+
+    .nav-main {
+        @media (max-width: 767px) {
+            background-color: #1c1c1c;
+        }
+    }
+
+    .nav-main ul li a {
+        @media (max-width: 767px) {
+            border-color: #1c1c1c;
+
+            &:hover {
+                border-color: #ffb054;
+            }
+        }
+    }
+
+    .section-home h1,
+    .list-works:hover .works-overlay h4 {
+        color: #1c1c1c;
+        background-color: #fff;
+    }
+
+    .section-about {
+        border-bottom: 1px solid #111;
+    }
+
+    .list-skills {
+        .list-skills-header {
+            background-image: url("../src/assets/images/skills-icons_night-mode.png");
+        }
+    }
+
+    .title-about,
+    .title-works,
+    .list-filters.active-filter,
+    .title-skills {
+        border-color: #fff;
+    }
+
+    .settings-menu h2,
+    .title-works,
+    .subtitle-works,
+    .list-filters,
+    .list-filters + li,
+    .works-overlay p a:hover,
+    .subtitle-about,
+    .subtitle-skills,
+    .title-contact,
+    .section-map section h2,
+    footer p a:hover {
+        color: #fff;
+    }
+
+    .list-works:hover .works-overlay {
+        background-image: none;
+        background-color: rgba(0, 0, 0, .75);
+    }
+
+    .section-works,
+    .section-skills,
+    footer {
+        background-color: #1c1c1c;
+    }
+
+    .list-item-contact .contact-overlay {
+        background-color: #ffb054;
+    }
+
+    .list-item-social.social-github a,
+    .list-item-social.social-codepen a,
+    .list-item-social.social-behance a,
+    .list-item-social.social-linkedin a {
+        background-color: transparent;
+
+        &:hover {
+            background-color: #ffb054;
+        }
+    }
+
+    .list-item-social a:hover {
+        opacity: 1;
+    }
+
+    .works-overlay p a:hover,
+    footer p a:hover {
+        color: #ffb054;
+    }
+
+    .list-filters.active-filter,
+    .list-filters:hover {
+        @media (max-width: 767px) {
+            color: #1c1c1c;
+            background-color: #fff;
+        }
+    }
+
+    .switch .icon {
+        background-color: #111;
+    }
+}

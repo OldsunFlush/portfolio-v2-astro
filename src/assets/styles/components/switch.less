@@ -1,0 +1,65 @@
+.switch {
+    position: relative;
+    min-height: 2.4rem;
+    display: block;
+    margin: 1rem 0;
+    padding: .2rem .8rem .2rem 4.2rem;
+    color: #fff;
+    line-height: 2.4rem;
+
+    &:hover {
+        cursor: pointer;
+
+        .icon {
+            background: rgba(@color-primary, 0.25);
+            box-shadow: 0 0 0 .1rem @color-primary;
+        }
+    }
+
+    input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+
+        &:checked + .icon {
+            background: @color-primary;
+            border-color: @color-primary;
+
+            &:before {
+                left: 1.5rem;
+            }
+        }
+    }
+
+    .icon {
+        position: absolute;
+        top: .5rem;
+        left: 0;
+        width: 3.2rem;
+        height: 1.8rem;
+        background: darken(@color-tertiary, 5%);
+        background-clip: padding-box;
+        border-radius: 1rem;
+        transition: background .2s, box-shadow .2s;;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: .1rem;
+            left: .1rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            display: block;
+            background: #fff;
+            border-radius: 50%;
+            transition: left .2s, color .2s, background .2s, border .2s, box-shadow .2s;
+        }
+    }
+}

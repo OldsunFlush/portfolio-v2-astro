@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+
+import imageLogo from "../assets/images/logos/logo.svg";
+---
+
+<footer>
+  <a href="#home" class="logo logo-main">
+    <Image src={imageLogo} width="64" height="64" alt="Retour à l'accueil" />
+  </a>
+  <p>
+    Copyright © <span id="current-year"></span> - Pierre PRÉZELIN<br />
+    <span>|</span>
+    <a href="/mentions-legales" title="Mentions légales (nouvelle fenêtre)">Mentions légales</a>
+  </p>
+</footer>

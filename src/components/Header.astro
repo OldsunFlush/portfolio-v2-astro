@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+
+import imageLogo from "../assets/images/logos/logo.svg";
+---
+
+<header>
+  <a href="#home" class="logo logo-main">
+    <Image src={imageLogo} width="64" height="64" alt="Retour à l'accueil" />
+  </a>
+  <nav class="nav nav-main">
+    <a href="#" class="settings-toggle" title="Afficher les options"></a>
+    <ul>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#works">Travaux</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="settings-menu">
+    <h2>Options</h2>
+    <section class="switch-selector">
+      <label class="switch">
+        <input type="checkbox" data-toggle="night-mode" /><i class="icon"></i> Thème sombre
+      </label>
+      <label class="switch">
+        <input type="checkbox" data-toggle="secret-punchline" /><i class="icon"></i> dank meme (2010)
+      </label>
+      <label class="switch">
+        <input type="checkbox" data-toggle="early-access" /><i class="icon"></i> Accès anticipé (obsolète)
+      </label>
+      <span class="version-number">v2.0.0-astro</span>
+    </section>
+  </div>
+  <a href="#" class="sidemenu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+</header>
+<div class="header-overlay">
+  <h1>Personnalisez<br />votre expérience</h1>
+</div>

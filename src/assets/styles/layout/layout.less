@@ -1,0 +1,170 @@
+/* ==================================================
+ * Layout styles
+ ================================================= */
+
+.clear {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.ripple-effect {
+    position: absolute;
+    display: block;
+    width: 13rem;
+    height: 13rem;
+    background-color: rgba(255, 255, 255, .15);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 5;
+    .scale(0);
+
+    &.animate {
+        animation: ripple .65s linear;
+    }
+}
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        .scale(2.5);
+    }
+}
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        .scale(2.5);
+    }
+}
+
+/* Header
+ ================================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    padding: 0 6.8rem;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 100;
+    box-sizing: border-box;
+    .transition(all .2s);
+
+    &.reduced {
+        height: 5rem;
+        background-color: rgba(0, 0, 0, .4);
+    }
+}
+
+.header-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    background-color: rgba(255, 176, 84, .75);
+    z-index: 110;
+
+    h1 {
+        position: relative;
+        top: 50%;
+        font-size: 9.6rem;
+        color: #fff;
+        text-shadow: .1rem .1rem 1rem rgba(0, 0, 0, .075);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+@media (max-width: @tabletMax) {
+    .header-overlay h1 {
+        font-size: 6.4rem;
+    }
+}
+
+@media (min-width: @tabletMin) and (max-width: @tabletMax) {
+    .header-overlay {
+        width: 75%;
+    }
+}
+
+@media (max-width: @smartphone) {
+    header {
+        height: 5rem;
+        padding: 0 3.4rem;
+    }
+
+    .header-overlay {
+        left: 0;
+        width: 50%;
+
+        h1 {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media (max-width: @smartphoneLowRes) {
+    header {
+        padding: 0 2rem;
+    }
+    
+    .header-overlay {
+        h1 {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+/* Footer
+ ================================================= */
+
+footer {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background-color: @color-primary;
+
+    br {
+        display: none;
+    }
+
+    p {
+        font-size: 1.3rem;
+        font-style: italic;
+        padding-bottom: 1.5rem;
+
+        a {
+            font-weight: bold;
+            color: #fff;
+
+            &:hover {
+                color: @color-tertiary;
+            }
+        }
+    }
+}
+
+@media (max-width: @smartphoneLowRes) {
+    footer {
+        br {
+            display: block;
+        }
+
+        span:nth-of-type(1) {
+            display: none;
+        }
+    }
+}

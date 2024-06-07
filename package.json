@@ -1,7 +1,7 @@
 {
-  "name": "curved-cloud",
+  "name": "portfolio-v2-astro",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0.0-astro",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "astro": "^4.9.3"
+  },
+  "devDependencies": {
+    "less": "^4.2.0"
   }
 }

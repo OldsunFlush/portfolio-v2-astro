@@ -1,0 +1,46 @@
+/* ==================================================
+ * 404 page styles
+ ================================================= */
+
+.error404 {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 0 3%;
+    display: table;
+    text-align: center;
+    background-color: @color-tertiary;
+    z-index: 10000;
+    box-sizing: border-box;
+
+    .error404-container {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+
+        h1 {
+            display: block;
+            vertical-align: middle;
+            text-align: center;
+            color: #fff;
+        }
+        a {
+            padding-top: 3.6rem;
+            display: inline-block;
+            font-size: 1.6rem;
+            color: @color-primary;
+            border-bottom: .2rem solid @color-tertiary;
+
+            &:hover {
+                border-bottom: .2rem solid @color-primary;
+            }
+        }
+    }
+}
+
+@media (max-width: @smartphoneLowRes) {
+    .error404 .error404-container h1 {
+        font-size: 4.2rem;
+    }
+}
