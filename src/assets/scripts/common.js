@@ -294,7 +294,7 @@
     // leafletMap: function () {
     //   var map = L.map("map").setView([44.837789, -0.57918], 13),
     //     marker = L.icon({
-    //       iconUrl: "/images/map-marker.svg",
+    //       iconUrl: "/images/icons/map-marker.svg",
     //       iconSize: [41, 51],
     //       iconAnchor: [22, 58],
     //     });

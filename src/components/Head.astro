@@ -23,29 +23,29 @@ const { title } = Astro.props;
   />
   <meta name="apple-mobile-web-app-capable" content="no" />
   <!-- Icons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/apple-touch-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon-180x180.png" />
-  <link rel="icon" type="image/png" href="/images/icons/android-chrome-192x192.png" sizes="192x192" />
-  <link rel="icon" type="image/png" href="/images/icons/android-chrome-144x144.png" sizes="144x144" />
-  <link rel="icon" type="image/png" href="/images/icons/android-chrome-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/images/icons/android-chrome-72x72.png" sizes="72x72" />
-  <link rel="icon" type="image/png" href="/images/icons/android-chrome-48x48.png" sizes="48x48" />
-  <link rel="icon" type="image/png" href="/images/icons/android-chrome-36x36.png" sizes="36x36" />
-  <link rel="icon" type="image/png" href="/images/icons/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/images/icons/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/images/icons/favicon-16x16.png" sizes="16x16" />
-  <link rel="manifest" href="/images/icons/manifest.json" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/pwa/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/icons/pwa/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/pwa/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/icons/pwa/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/icons/pwa/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/icons/pwa/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/pwa/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/icons/pwa/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/pwa/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/android-chrome-144x144.png" sizes="144x144" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/android-chrome-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/android-chrome-72x72.png" sizes="72x72" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/android-chrome-48x48.png" sizes="48x48" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/android-chrome-36x36.png" sizes="36x36" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/images/icons/pwa/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="/images/icons/pwa/manifest.json" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <meta name="msapplication-TileColor" content="#202a37" />
-  <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png" />
-  <meta name="msapplication-config" content="/images/icons/browserconfig.xml" />
+  <meta name="msapplication-TileImage" content="/images/icons/pwa/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/images/icons/pwa/browserconfig.xml" />
   <meta name="theme-color" content="#202a37" />
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" />
@@ -53,10 +53,10 @@ const { title } = Astro.props;
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,700,700italic"
   />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- General stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" /> -->
   <link rel="stylesheet" href="/styles/vendors/strip/strip.css" />
   <link rel="stylesheet" href="/styles/styles.css" />
 </head>
