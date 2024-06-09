@@ -9,8 +9,12 @@ import imageLogo from "../assets/images/logos/logo.svg";
     <Image src={imageLogo} width="64" height="64" alt="Retour à l'accueil" />
   </a>
   <p>
-    Copyright © <span id="current-year"></span> - Pierre PRÉZELIN<br />
+    Copyright © 2015-<span id="current-year"></span> · Pierre PRÉZELIN<br />
     <span>|</span>
     <a href="/mentions-legales" title="Mentions légales (nouvelle fenêtre)">Mentions légales</a>
   </p>
 </footer>
+
+<script>
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+</script>
