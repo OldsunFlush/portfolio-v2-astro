@@ -1,7 +1,7 @@
 {
   "name": "portfolio-v2-astro",
   "type": "module",
-  "version": "2.0.2-astro",
+  "version": "2.0.4-astro",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.10.1"
+    "astro": "^5.7.2"
   },
   "devDependencies": {
-    "less": "^4.2.0"
+    "less": "^4.3.0"
   }
 }
